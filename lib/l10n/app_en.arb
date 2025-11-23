@@ -1,0 +1,8 @@
+{
+  "@@locale": "en",
+  "appName": "FilmDecisionEN",
+  "swipeRight": "Like",
+  "swipeLeft": "Dislike",
+  "matchFound": "We decided !",
+  "selectMovie": "Select a movie"
+}
