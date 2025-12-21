@@ -1,3 +1,5 @@
+import 'package:filmdecision_frontend/l10n/app_localizations_en.dart';
+import 'package:filmdecision_frontend/l10n/app_localizations_fr.dart';
 import 'package:flutter/widgets.dart';
 
 class LanguageService {
@@ -5,10 +7,20 @@ class LanguageService {
     const Locale('en'),
   );
 
-  static Locale get locale => currentLanguage.value;
+  static final ValueNotifier<dynamic> currentLocalizations = ValueNotifier(
+    AppLocalizationsEn(),
+  );
+
+  static dynamic getLocalizations() => currentLocalizations.value;
 
   static void changeLanguage(String languageCode) {
     currentLanguage.value = Locale(languageCode);
+    
+    if (languageCode == 'fr') {
+      currentLocalizations.value = AppLocalizationsFr();
+    } else {
+      currentLocalizations.value = AppLocalizationsEn();
+    }
   }
 
   static void loadInitialLanguage() {
