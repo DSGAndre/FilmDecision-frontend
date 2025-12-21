@@ -1,6 +1,7 @@
-import 'package:filmdecision_frontend/l10n/app_localizations.dart';
-import 'package:filmdecision_frontend/l10n/app_localizations_en.dart';
+import 'package:filmdecision_frontend/ui/home/widgets/create_room_button.dart';
+import 'package:filmdecision_frontend/ui/home/widgets/join_room_button.dart';
 import 'package:filmdecision_frontend/ui/home/widgets/lang_button.dart';
+import 'package:filmdecision_frontend/services/language_service.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,12 +9,27 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final localization = AppLocalizations.of(context) ?? AppLocalizationsEn();
+    final localization = LanguageService.getLocalizations();
     final String appName = localization.appName;
 
     return Scaffold(
-      appBar: AppBar(title: Text(appName), actions: const [LangButton()]),
-      body: Center(child: Text(appName)),
+      backgroundColor: Colors.transparent,
+      appBar: AppBar(
+        title: Text(appName),
+        actions: const [LangButton()],
+        backgroundColor: Colors.transparent,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(appName),
+            CreateRoomButton(),
+            
+            JoinRoomButton()
+          ],
+        ),
+      ),
     );
   }
 }

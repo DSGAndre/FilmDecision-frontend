@@ -12,6 +12,12 @@ class AppLocalizationsFr extends AppLocalizations {
   String get appName => 'FilmDecisionFR';
 
   @override
+  String get createRoom => 'Créer une salle';
+
+  @override
+  String get joinRoom => 'Rejoindre une salle';
+
+  @override
   String get swipeRight => 'J\'aime';
 
   @override

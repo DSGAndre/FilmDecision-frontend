@@ -12,6 +12,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appName => 'FilmDecisionEN';
 
   @override
+  String get createRoom => 'Create Room';
+
+  @override
+  String get joinRoom => 'Join Room';
+
+  @override
   String get swipeRight => 'Like';
 
   @override

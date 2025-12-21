@@ -1,6 +1,8 @@
 {
   "@@locale": "en",
   "appName": "FilmDecisionEN",
+  "createRoom": "Create Room",
+  "joinRoom": "Join Room",
   "swipeRight": "Like",
   "swipeLeft": "Dislike",
   "matchFound": "We decided !",

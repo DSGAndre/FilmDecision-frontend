@@ -101,6 +101,18 @@ abstract class AppLocalizations {
   /// **'FilmDecisionEN'**
   String get appName;
 
+  /// No description provided for @createRoom.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Room'**
+  String get createRoom;
+
+  /// No description provided for @joinRoom.
+  ///
+  /// In en, this message translates to:
+  /// **'Join Room'**
+  String get joinRoom;
+
   /// No description provided for @swipeRight.
   ///
   /// In en, this message translates to:
